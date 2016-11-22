@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+</head>
+<body>
+  <div ng-app="appName">
+      <ul ng-controller="girlsCtrl">
+      <!-- ng model helps us bind the input to the controller-->
+      <input type="text" placeholder="Text" ng-model="inputToAddToArray">
+      <input type="submit" placeholder="submit" ng-click="addToArray()">
+        <li ng-repeat="girl in girlsWhoHaveRejectedMe track by $index">{{girl}} <input type="submit" value="Remove" ng-click="removeFromArray()"></li>
+      </ul>
+    </div>
+  </div>
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="string.js"></script>
+
+</body>
+</html>
